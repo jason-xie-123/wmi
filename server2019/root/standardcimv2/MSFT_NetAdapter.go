@@ -1,18 +1,20 @@
 // Copyright 2019 (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
-//
 // Author:
-//      Auto Generated on 9/18/2020 using wmigen
-//      Source root.StandardCimv2
-//////////////////////////////////////////////
+//
+//	Auto Generated on 9/18/2020 using wmigen
+//	Source root.StandardCimv2
+//
+// ////////////////////////////////////////////
 package standardcimv2
 
 import (
+	"reflect"
+
 	"github.com/microsoft/wmi/pkg/base/query"
 	"github.com/microsoft/wmi/pkg/errors"
 	cim "github.com/microsoft/wmi/pkg/wmiinstance"
-	"reflect"
 )
 
 // MSFT_NetAdapter struct
@@ -780,7 +782,7 @@ func (instance *MSFT_NetAdapter) GetPropertyInterfaceIndex() (value uint32, err 
 		return
 	}
 
-	valuetmp, ok := retValue.(uint32)
+	valuetmp, ok := retValue.(int32)
 	if !ok {
 		err = errors.Wrapf(errors.InvalidType, " uint32 is Invalid. Expected %s", reflect.TypeOf(retValue))
 		return
